@@ -1,0 +1,86 @@
+body {
+  background-color:rgb(245, 150, 170);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  color:rgb(203, 27, 69);
+}
+
+h3 {
+  color:rgb(0, 137, 167);
+
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.error-msg {
+  width: 50%;
+  text-align: center;
+  background-color: salmon;
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: white;
+  margin: 10px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 150px;
+}
+
+input {
+  width: 600px;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: none;
+  background-color: #f5f5f5;
+}
+
+p {
+  color: rgb(203, 27, 69);
+  font-weight: bolder;
+}
+
+button.shorten {
+  width: 30%;
+  background-color: white;
+  border: 1px solid rgb(203, 27, 69);
+  border-radius: 3%;
+  color: rgb(203, 27, 69);
+  padding: 0.5rem;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: rgb(219, 77, 109);
+  border: 1px solid white;
+  color: white;
+}
+
+button.copy {
+  width: 10%;
+  height: 10%;
+  padding: 0.5rem;
+  background-color: rgb(203, 27, 69);
+  border: 1px solid white;
+  border-radius:20%;
+  color: white;
+}
+
+button.copy:hover {
+  background-color: rgb(219, 77, 109);
+  border: 1px solid white;
+  color: white;
+}
