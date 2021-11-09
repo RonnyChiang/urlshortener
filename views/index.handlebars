@@ -3,7 +3,7 @@
     <input type="url" name="url" id="urlInput" placeholder="Input URL here" value="{{originalURL}}" required />
     <div class="short-zone">
       <button class="shorten " type="submit">Short!</button>
-      <button type="reset" class="reset">reset</button>
+      <button type="reset" class="reset" onclick="ClearFields()">reset</button>
     </div>
   </div>
 </form>
@@ -12,7 +12,7 @@
 <div class=" result">
   <h3>Success! Please use this link:</h3>
   <div class="d-flex">
-    <p id="generatedURL" class="col-sm-10">{{origin}}/{{shortURL}}</p>
+    <p id="shortUrl" class="col-sm-10">{{origin}}/{{shortURL}}</p>
     <button class="copy col-sm-2" onclick="copy()"><i class="fas fa-copy" </i></i></button>
 
   </div>
@@ -21,11 +21,16 @@
 
 <script>
   function copy() {
-    const URL = document.getElementById("generatedURL")
+    const URL = document.getElementById("shortUrl")
     navigator.clipboard.writeText(URL.innerText)
       .then(() => alert('copied'))
       .catch(error => console.log(error))
   }
+  // not yet 
+  function ClearFields() {
+    document.getElementById("urlInput").value = "";
+  }
+
 </script>
 {{else}}
 

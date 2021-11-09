@@ -6,4 +6,4 @@ const urlSchema = new Schema({
   originalURL: { type: String, required: true },
 })
 
-module.exports = mongoose.model("URL", urlSchema)
+module.exports = mongoose.model("urls", urlSchema)
