@@ -3,7 +3,10 @@
     <input type="url" name="url" id="urlInput" placeholder="Input URL here" value="{{originalURL}}" required />
     <div class="short-zone">
       <button class="shorten " type="submit">Short!</button>
-      <button type="reset" class="reset" onclick="ClearFields()">reset</button>
+      {{#if shortURL}}
+      <button type="button" class="clean" onclick="ClearFields()">reset</button>
+      {{else}}
+      {{/if}}
     </div>
   </div>
 </form>

@@ -60,7 +60,7 @@ p {
   justify-content: end;
 }
 
-button.shorten, button.reset {
+button.shorten, button.clean {
   width: 30%;
   height: 50%;
   background-color: white;
