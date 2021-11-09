@@ -15,7 +15,11 @@ router.get('/', (req, res) => {
 router.post("/", (req, res) => {
   const shortUrl = shortenUrl(5)
   return Urls.create({ shortURL: shortUrl, originalURL: req.body.url })
-    .then(() => res.redirect("/"))
+    .then(() => res.render("index", {
+      originalURL: req.body.url,
+      origin: req.headers.origin,
+      shortURL: shortUrl,
+    }))
     .catch(err => {
       console.log(err)
       res.render(

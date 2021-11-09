@@ -1,15 +1,18 @@
 <form action="/" method="POST">
   <div class="container">
-    <input type="url" name="url" placeholder="Input URL here" required />
-    <button class="shorten" type="submit">Short now</button>
+    <input type="url" name="url" id="urlInput" placeholder="Input URL here" value="{{originalURL}}" required />
+    <div class="short-zone">
+      <button class="shorten " type="submit">Short!</button>
+      <button type="reset" class="reset">reset</button>
+    </div>
   </div>
 </form>
 
-{{!-- {{#if shortURL}} --}}
-<div class="result">
+{{#if shortURL}}
+<div class=" result">
   <h3>Success! Please use this link:</h3>
   <div class="d-flex">
-    <p id="generatedURL" class="col-sm-10">https:////</p>
+    <p id="generatedURL" class="col-sm-10">{{origin}}/{{shortURL}}</p>
     <button class="copy col-sm-2" onclick="copy()"><i class="fas fa-copy" </i></i></button>
 
   </div>
@@ -24,6 +27,6 @@
       .catch(error => console.log(error))
   }
 </script>
-{{!-- {{else}} --}}
+{{else}}
 
-{{!-- {{/if}} --}}
+{{/if}}
