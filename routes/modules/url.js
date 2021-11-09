@@ -3,18 +3,14 @@ const express = require('express')
 const router = express.Router()
 // 引用 restaurant model
 const Urls = require('../../models/urls')
-const shortenUrl = require("../../public/javascripts/shortenUrl")
+const shortenUrl = require("../../public/javascripts/shortenURL")
 
-
-// 定義首頁路由
-router.get('/', (req, res) => {
-  res.render("index")
-})
-
+console.log(typeof (shortenUrl))
 // creat shortUrl
 router.post("/", (req, res) => {
-  const shortUrl = shortenUrl(5)
-  return Urls.create({ shortURL: shortUrl, originalURL: req.body.url })
+  console.log(req.body.url)
+  console.log(shortenUrl)
+  return Urls.create({ shortURL: shortenUrl, originalURL: req.body.url })
     .then(() => res.redirect("/"))
     .catch(err => {
       console.log(err)
@@ -24,6 +20,3 @@ router.post("/", (req, res) => {
       )
     })
 })
-
-// 匯出路由模組
-module.exports = router
