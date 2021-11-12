@@ -8,7 +8,8 @@ const shortenUrl = require("../../public/javascripts/shortenURL")
 // connect shortUrl
 router.get("/:shortURL", (req, res) => {
   const shortUrl = req.params.shortURL
-  return Urls.findOne({ "shortURL": shortUrl })
+
+  return Urls.findOne({ shortURL: shortUrl })
     .lean()
     .then(link => {
       if (!link) {
@@ -17,7 +18,6 @@ router.get("/:shortURL", (req, res) => {
           errorURL: req.headers.host + "/" + shortUrl,
         })
       }
-
       res.redirect(link.originalURL)
     })
   // .catch(err => {
