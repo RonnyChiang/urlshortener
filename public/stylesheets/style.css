@@ -22,15 +22,6 @@ img {
   margin-bottom: 50px;
 }
 
-.error-msg {
-  width: 50%;
-  text-align: center;
-  background-color: salmon;
-  padding: 8px 15px;
-  border-radius: 5px;
-  color: white;
-  margin: 10px 0;
-}
 
 .container {
   display: flex;
@@ -92,4 +83,20 @@ button.copy:hover {
   background-color: rgb(219, 77, 109);
   border: 1px solid white;
   color: white;
+}
+
+
+/* error page  */
+
+.error-msg {
+  width: 50%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgb(208, 16, 76);
+  color:white;
+  margin-bottom: 10px;
+}
+
+.error-url {
+  color:gray;
 }

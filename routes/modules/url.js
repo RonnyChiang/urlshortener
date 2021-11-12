@@ -20,13 +20,13 @@ router.get("/:shortURL", (req, res) => {
 
       res.redirect(link.originalURL)
     })
-    .catch(err => {
-      console.log(err)
-      res.render(
-        'errorPage',
-        { status: 500, error: err.message }
-      )
-    })
+  // .catch(err => {
+  //   console.log(err)
+  //   res.render(
+  //     'errorPage',
+  //     { status: 500, error: err.message }
+  //   )
+  // })
 })
 
 // 匯出路由模組
