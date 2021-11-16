@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 // 引用 urls model
 const Urls = require('../../models/urls')
-const shortenUrl = require("../../public/javascripts/shortenUrl")
+const shortenUrl = require("../../public/javascripts/shortenurl")
 
 
 // 定義首頁路由

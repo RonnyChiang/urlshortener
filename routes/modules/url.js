@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 // 引用 restaurant model
 const Urls = require('../../models/urls')
-const shortenUrl = require("../../public/javascripts/shortenURL")
+const shortenUrl = require("../../public/javascripts/shortenurl")
 
 // connect shortUrl
 router.get("/:shortURL", (req, res) => {
