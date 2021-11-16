@@ -32,7 +32,7 @@ router.post("/", (req, res) => {
     .catch(err => {
       console.log(err)
       res.render(
-        'errorPage',
+        'error',
         { status: 500, error: err.message }
       )
     })
